@@ -83,7 +83,7 @@ All heap allocation occurs during plugin initialization. The `processBlock()` pa
 ### Clone & Build
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ToneLab.git
+git clone https://github.com/KaiHansen22/ToneLabDevelopment.git
 cd ToneLab
 
 # Generate project files
@@ -135,7 +135,7 @@ This project demonstrates applied skills in:
 ## Process Documentation
 
 Full development process, design decisions, and iteration log available at:  
-**[ToneLab Development Log →](https://YOUR_USERNAME.github.io/ToneLab/process)**
+**[ToneLab Development Log →](https://KaiHansen22/ToneLabDevelopment/process)**
 
 ---
 
