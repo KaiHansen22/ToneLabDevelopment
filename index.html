@@ -31,14 +31,9 @@
     line-height: 1.7;
   }
 
-  /* NAV */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
     padding: 1.25rem 3.5rem;
     background: rgba(245,243,239,0.92);
     backdrop-filter: blur(10px);
@@ -51,96 +46,44 @@
   .nav-links a:hover { color: var(--ink); }
   .nav-links .nav-cta { color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
 
-  /* FRAME */
   .frame { max-width: 1200px; margin: 0 auto; border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); }
 
-  /* HERO */
   .hero { padding: 18vh 3.5rem 8rem; border-bottom: 1px solid var(--rule); }
 
-  .hero-eyebrow {
-    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink3);
-    margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.2s;
-  }
-  .hero h1 {
-    font-family: var(--serif); font-size: clamp(4rem, 9vw, 8.5rem); font-weight: 400;
-    line-height: 1; letter-spacing: -0.02em; margin-bottom: 1rem;
-    opacity: 0; animation: fadeUp 0.7s ease forwards 0.35s;
-  }
-  .hero-tagline {
-    font-family: var(--serif); font-size: clamp(0.95rem, 1.8vw, 1.2rem); font-style: italic;
-    color: var(--ink2); margin-bottom: 2.5rem;
-    opacity: 0; animation: fadeUp 0.7s ease forwards 0.5s;
-  }
-  .hero-abstract {
-    max-width: 640px; font-size: 1rem; color: var(--ink2); font-weight: 300;
-    line-height: 1.8; margin-bottom: 3rem;
-    opacity: 0; animation: fadeUp 0.7s ease forwards 0.6s;
-  }
+  .hero-eyebrow { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink3); margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.2s; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(4rem, 9vw, 8.5rem); font-weight: 400; line-height: 1; letter-spacing: -0.02em; margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.35s; }
+  .hero-tagline { font-family: var(--serif); font-size: clamp(0.95rem, 1.8vw, 1.2rem); font-style: italic; color: var(--ink2); margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.5s; }
+  .hero-abstract { max-width: 640px; font-size: 1rem; color: var(--ink2); font-weight: 300; line-height: 1.8; margin-bottom: 3rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.6s; }
   .hero-abstract p + p { margin-top: 1em; }
 
-  .hero-meta {
-    display: flex; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 3rem;
-    padding-top: 2rem; border-top: 1px solid var(--rule);
-    opacity: 0; animation: fadeUp 0.7s ease forwards 0.72s;
-  }
+  .hero-meta { display: flex; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); opacity: 0; animation: fadeUp 0.7s ease forwards 0.72s; }
   .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
   .meta-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); }
   .meta-value { font-family: var(--serif); font-size: 1rem; color: var(--ink); }
 
-  .hero-links {
-    display: flex; gap: 2rem; align-items: center;
-    opacity: 0; animation: fadeUp 0.7s ease forwards 0.84s;
-  }
-  .link-primary {
-    font-size: 13px; font-weight: 500; color: var(--ink); text-decoration: none;
-    border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: opacity 0.2s;
-  }
+  .hero-links { display: flex; gap: 2rem; align-items: center; opacity: 0; animation: fadeUp 0.7s ease forwards 0.84s; }
+  .link-primary { font-size: 13px; font-weight: 500; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: opacity 0.2s; }
   .link-primary:hover { opacity: 0.55; }
   .link-ghost { font-size: 13px; color: var(--ink3); text-decoration: none; transition: color 0.2s; }
   .link-ghost:hover { color: var(--ink); }
 
-  /* SECTIONS */
   .section-wrap { padding: 7rem 3.5rem; border-bottom: 1px solid var(--rule); }
 
-  .section-header {
-    display: grid; grid-template-columns: 160px 1fr; gap: 3rem;
-    align-items: start; margin-bottom: 4.5rem;
-  }
+  .section-header { display: grid; grid-template-columns: 160px 1fr; gap: 3rem; align-items: start; margin-bottom: 4.5rem; }
   .section-num { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink3); padding-top: 0.5rem; }
   .section-title { font-family: var(--serif); font-size: clamp(1.6rem, 3.2vw, 2.6rem); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; }
   .section-title em { font-style: italic; }
 
-  /* PROSE BODY — for long-form dev writing */
-  .prose {
-    max-width: 720px;
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--ink2);
-    line-height: 1.85;
-  }
+  .prose { max-width: 720px; font-size: 15px; font-weight: 300; color: var(--ink2); line-height: 1.85; }
   .prose p + p { margin-top: 1.1em; }
   .prose strong { font-weight: 500; color: var(--ink); }
-  .prose code {
-    font-family: 'Courier New', monospace;
-    font-size: 12.5px;
-    background: var(--bg3);
-    padding: 0.1em 0.4em;
-    border-radius: 2px;
-    color: var(--ink);
-  }
+  .prose code { font-family: 'Courier New', monospace; font-size: 12.5px; background: var(--bg3); padding: 0.1em 0.4em; border-radius: 2px; color: var(--ink); }
 
-  /* TWO-COL LAYOUT for section with sidebar label */
-  .two-col {
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 3rem;
-    align-items: start;
-  }
+  .two-col { display: grid; grid-template-columns: 160px 1fr; gap: 3rem; align-items: start; }
   .two-col + .two-col { margin-top: 3.5rem; padding-top: 3.5rem; border-top: 1px solid var(--rule2); }
   .col-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink3); padding-top: 0.35rem; }
   .col-heading { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.75rem; line-height: 1.3; }
 
-  /* DESIGN DECISION CARDS */
   .decision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--rule); }
   .decision-card { padding: 2.25rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .decision-card:nth-child(2n) { border-right: none; }
@@ -150,20 +93,14 @@
   .dc-body { font-size: 13px; color: var(--ink2); font-weight: 300; line-height: 1.75; }
   .dc-body code { font-family: 'Courier New', monospace; font-size: 11.5px; background: var(--bg3); padding: 0.1em 0.35em; border-radius: 2px; }
 
-  /* SIGNAL FLOW TABLE */
   .flow-table { width: 100%; border-collapse: collapse; border: 1px solid var(--rule); margin-top: 3rem; }
-  .flow-table th {
-    font-size: 11px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--ink3); text-align: left; padding: 0.85rem 1.25rem;
-    border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--bg2);
-  }
+  .flow-table th { font-size: 11px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink3); text-align: left; padding: 0.85rem 1.25rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--bg2); }
   .flow-table th:last-child { border-right: none; }
   .flow-table td { padding: 1.25rem; font-size: 13px; border-right: 1px solid var(--rule); vertical-align: top; color: var(--ink2); font-weight: 300; line-height: 1.6; }
   .flow-table td:last-child { border-right: none; }
   .flow-table td strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 0.25rem; font-size: 14px; }
   .flow-table td code { font-family: 'Courier New', monospace; font-size: 11.5px; background: var(--bg3); padding: 0.1em 0.35em; border-radius: 2px; color: var(--ink); }
 
-  /* CODE SECTION */
   .code-section { background: var(--ink); color: #d0ccc4; }
   .code-section .section-wrap { border-bottom: none; }
   .code-section .section-num { color: rgba(255,255,255,0.28); }
@@ -171,20 +108,12 @@
 
   .code-block { border: 1px solid rgba(255,255,255,0.1); overflow-x: auto; margin-top: 3rem; }
   .code-block + .code-block { margin-top: 1px; }
-  .code-block-header {
-    display: flex; justify-content: space-between; padding: 0.7rem 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.28);
-  }
-  pre {
-    font-family: 'Courier New', monospace; font-size: 12.5px; line-height: 1.9;
-    padding: 2rem 1.5rem; color: #a8a49c; white-space: pre;
-  }
+  .code-block-header { display: flex; justify-content: space-between; padding: 0.7rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.28); }
+  pre { font-family: 'Courier New', monospace; font-size: 12.5px; line-height: 1.9; padding: 2rem 1.5rem; color: #a8a49c; white-space: pre; }
   .ck { color: #c8a87a; }
   .cf { color: #9ab8d4; }
   .cc { color: #3e3c38; }
   .cn { color: #d4886a; }
-  .cs { color: #8aad8a; }
 
   .code-notes { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid rgba(255,255,255,0.08); border-top: none; }
   .code-note { padding: 2rem 1.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
@@ -194,26 +123,16 @@
   .cn-body { font-size: 12.5px; color: rgba(255,255,255,0.38); font-weight: 300; line-height: 1.65; }
   .cn-body code { font-family: 'Courier New', monospace; font-size: 11px; background: rgba(255,255,255,0.07); padding: 0.1em 0.35em; border-radius: 2px; }
 
-  /* BUILD INSTRUCTIONS */
   .build-steps { margin-top: 0; }
-  .build-step {
-    display: grid; grid-template-columns: 2.5rem 1fr;
-    gap: 1.5rem; padding: 1.75rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    align-items: start;
-  }
+  .build-step { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: start; }
   .build-step:last-child { border-bottom: none; }
   .step-num { font-size: 11px; letter-spacing: 0.1em; color: rgba(255,255,255,0.25); padding-top: 0.2rem; }
   .step-title { font-size: 14px; font-weight: 500; color: #e8e4dc; margin-bottom: 0.4rem; }
   .step-body { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; line-height: 1.6; }
   .step-body code { font-family: 'Courier New', monospace; font-size: 12px; background: rgba(255,255,255,0.07); padding: 0.15em 0.4em; border-radius: 2px; color: rgba(255,255,255,0.7); }
 
-  /* FOOTER */
   footer { border-top: 1px solid var(--rule); }
-  .footer-inner {
-    max-width: 1200px; margin: 0 auto; padding: 2.25rem 3.5rem;
-    display: flex; justify-content: space-between; align-items: center;
-  }
+  .footer-inner { max-width: 1200px; margin: 0 auto; padding: 2.25rem 3.5rem; display: flex; justify-content: space-between; align-items: center; }
   .footer-logo { font-family: var(--serif); font-size: 1rem; color: var(--ink); text-decoration: none; }
   .footer-logo em { font-style: italic; }
   .footer-links { display: flex; gap: 2rem; align-items: center; }
@@ -221,13 +140,11 @@
   .footer-links a:hover { color: var(--ink); }
   .footer-copy { font-size: 12px; color: var(--ink3); }
 
-  /* ANIMATIONS */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
   .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.65s ease, transform 0.65s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-  .d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; } .d3 { transition-delay: 0.3s; }
+  .d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; }
 
-  /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
@@ -254,15 +171,14 @@
     <li><a href="#motivation">Motivation</a></li>
     <li><a href="#architecture">Architecture</a></li>
     <li><a href="#implementation">Implementation</a></li>
-    <li><a href="#build">Dev Environment</a></li>
+    <li><a href="#dev-environment">Dev Environment</a></li>
     <li><a href="README.md">README</a></li>
-    <li><a href="https://github.com/YOUR_USERNAME/ToneLab" class="nav-cta">GitHub →</a></li>
+    <li><a href="https://github.com/KaiHansen22/ToneLabDevelopment" class="nav-cta">GitHub →</a></li>
   </ul>
 </nav>
 
 <div class="frame">
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-eyebrow">ATLAS 4010 · University of Colorado Boulder · 2025–2026</div>
     <h1>ToneLab</h1>
@@ -270,10 +186,10 @@
 
     <div class="hero-abstract">
       <p>
-        ToneLab is an audio effects plugin that decouples <em>what</em> effect is applied from <em>where</em> in the frequency spectrum it acts. Rather than processing a signal as a monolithic whole, ToneLab splits audio into five independent spectral bands via a Linkwitz-Riley crossover filter bank, routes each band through its own dedicated effects chain, and recombines the results in a phase-coherent parallel architecture.
+        ToneLab is an audio effects plugin that decouples <em>what</em> effect is applied from <em>where</em> in the frequency spectrum it acts. Each of the five effect lanes has its own multi-band spectral shaping layer that defines which frequencies are routed into that lane's effect engine. All five lanes process in parallel and are recombined into a single stereo output.
       </p>
       <p>
-        The project was developed as a capstone for ATLAS 4010, exploring the intersection of real-time DSP constraints, JUCE plugin architecture, and interaction design for audio tooling. The core engineering challenge was building a parallel processing architecture that satisfies the hard real-time requirements of the audio thread: zero allocation, no locks, and sample-accurate parameter automation, while remaining musically useful.
+        The project was developed as a capstone for ATLAS 4010, exploring the intersection of real-time DSP constraints, JUCE plugin architecture, and interaction design for audio tooling. The core engineering challenge was building a parallel processing architecture that satisfies the hard real-time requirements of the audio thread: zero blocking, sample-accurate parameter automation, and perceptually transparent wet/dry blending, while remaining musically useful.
       </p>
     </div>
 
@@ -288,7 +204,7 @@
       </div>
       <div class="meta-item">
         <span class="meta-label">Build</span>
-        <span class="meta-value">CMake 3.22+</span>
+        <span class="meta-value">Projucer / Xcode</span>
       </div>
       <div class="meta-item">
         <span class="meta-label">Formats</span>
@@ -305,14 +221,14 @@
     </div>
 
     <div class="hero-links">
-      <a href="https://github.com/YOUR_USERNAME/ToneLab" class="link-primary">View source on GitHub →</a>
+      <a href="#architecture" class="link-primary">Explore the architecture →</a>
+      <a href="https://github.com/KaiHansen22/ToneLabDevelopment" class="link-ghost">GitHub</a>
       <a href="README.md" class="link-ghost">README</a>
-      <a href="process.md" class="link-ghost">Process log</a>
       <a href="https://vector-dsp.com/tonelab" class="link-ghost">Product page</a>
     </div>
   </div>
 
-  <!-- MOTIVATION & RESEARCH CONTEXT -->
+  <!-- MOTIVATION -->
   <div class="section-wrap" id="motivation">
     <div class="section-header reveal">
       <div class="section-num">01 — Motivation</div>
@@ -326,7 +242,7 @@
         <div class="prose">
           <p>Standard insert effects chains apply processing to the full audio spectrum. This is acoustically appropriate for some effects (a compressor shaping dynamics, for instance) but creates unwanted interactions for others. A reverb applied to a full mix introduces low-frequency wash. A distortion applied to a vocal bus blends harmonic saturation of the fundamental frequencies with the high-frequency content in ways that are often undesirable.</p>
           <p>The conventional workaround is a parallel send architecture: duplicate the signal to multiple buses, insert an EQ on each to isolate a frequency range, apply the desired effect, and sum back to the main channel. This works, but requires significant manual routing overhead: a separate bus per effect, careful gain staging, and session complexity that grows with each added process.</p>
-          <p>ToneLab asks: what if the frequency-aware routing was native to the plugin itself?</p>
+          <p>ToneLab asks: what if frequency-aware routing was native to the plugin itself?</p>
         </div>
       </div>
     </div>
@@ -336,19 +252,19 @@
       <div>
         <div class="col-heading">Collapse the routing into a single insert</div>
         <div class="prose">
-          <p>The primary design goal was to internalize the parallel send architecture into a single VST3/AU insert that behaves like any other plugin in a DAW: five independent spectral bands, each with its own effect chain, no additional routing, no auxiliary buses. Insert ToneLab, configure the bands, mix the result.</p>
-          <p>The secondary goal was to do this without violating real-time audio constraints: all processing must complete deterministically within the audio buffer period, with no heap allocation on the audio thread and no blocking operations that could cause dropouts.</p>
+          <p>The primary design goal was to internalize the parallel send architecture into a single VST3/AU insert that behaves like any other plugin in a DAW: five independent effect lanes, each with its own spectral shaping, no additional routing, no auxiliary buses. Insert ToneLab, shape the bands, mix the result.</p>
+          <p>The secondary goal was to do this without violating real-time audio constraints: all processing must complete deterministically within the audio buffer period, with no blocking operations that could cause dropouts.</p>
         </div>
       </div>
     </div>
 
     <div class="two-col reveal d1">
-      <div class="col-label">Scope & Constraints</div>
+      <div class="col-label">Scope</div>
       <div>
         <div class="col-heading">Academic context and technical boundaries</div>
         <div class="prose">
-          <p>ToneLab was developed within the ATLAS 4010 capstone framework over one academic year at CU Boulder. The project was scoped as a solo engineering effort, focusing on DSP architecture and plugin development rather than visual design polish or feature breadth. The five effect types (Distortion, Chorus, Reverb, Delay, Saturation) were chosen for their range of spectral interaction characteristics, not to be exhaustive.</p>
-          <p>The implementation deliberately avoids third-party DSP libraries beyond JUCE's built-in <code>dsp::</code> module, keeping the codebase self-contained and making the signal processing logic legible to anyone reviewing the source.</p>
+          <p>ToneLab was developed within the capstone framework over one academic year at CU Boulder. The project was scoped as a solo engineering effort, focusing on DSP architecture and plugin development; a secondary goal being visual design polish and feature comprehensiveness. The five effect types (Distortion, Chorus, Reverb, Delay, Saturation) were chosen for their range of spectral interaction characteristics, not to be exhaustive.</p>
+          <p>The implementation deliberately avoids third-party DSP libraries beyond JUCE's built-in <code>dsp::</code> module, keeping the signal processing logic legible and the codebase self-contained.</p>
         </div>
       </div>
     </div>
@@ -358,7 +274,7 @@
   <div class="section-wrap" id="architecture">
     <div class="section-header reveal">
       <div class="section-num">02 — Architecture</div>
-      <h2 class="section-title">Signal flow &amp;<br><em>module design.</em></h2>
+      <h2 class="section-title">Signal flow &amp;<br><em>spectral send design.</em></h2>
     </div>
 
     <div class="reveal d1">
@@ -366,46 +282,39 @@
         <thead>
           <tr>
             <th>Stage</th>
-            <th>Module</th>
-            <th>Responsibility</th>
-            <th>Notes</th>
+            <th>Mechanism</th>
+            <th>Detail</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>1 — Input</strong>Audio buffer from host</td>
-            <td>—</td>
-            <td>Raw PCM from the DAW's audio engine. Stereo, 32-bit float.</td>
-            <td>Buffer size and sample rate negotiated at <code>prepareToPlay()</code></td>
+            <td><strong>Input</strong>Raw signal from host</td>
+            <td>Input gain, peak detection</td>
+            <td>Stereo 32-bit float. Input gain applied before lanes. Peak levels written atomically for the metering display.</td>
           </tr>
           <tr>
-            <td><strong>2 — Split</strong>Crossover filter bank</td>
-            <td><code>SpectrumSplitter</code></td>
-            <td>Divides incoming audio into five frequency bands using cascaded Linkwitz-Riley filters. Each band is copied into a pre-allocated band buffer.</td>
-            <td>LR4 (4th-order) filters chosen for flat summed magnitude response at crossover points</td>
+            <td><strong>Spectral Send</strong>Per-lane shaping</td>
+            <td><code>SendMask5</code> — 5-band IIR EQ</td>
+            <td>Each lane shapes a copy of the dry signal through its own 5-band EQ (3-cascade IIR per band plus a notch). The shaped signal is what feeds the effect engine — not the raw input. Band types: peak, low/high shelf, bandpass, highpass, lowpass, notch.</td>
           </tr>
           <tr>
-            <td><strong>3 — Process</strong>Per-band FX chains</td>
-            <td><code>LaneProcessor[5]</code></td>
-            <td>Each of the five lanes applies its assigned effect independently to its frequency-isolated buffer. Lanes run concurrently and do not share state.</td>
-            <td>All lanes read from their band buffer; write to the same buffer in place</td>
+            <td><strong>Lane Processing</strong>5 parallel effect engines</td>
+            <td>Chorus, Delay, Saturation, Reverb, Distortion</td>
+            <td>Each lane processes its shaped send independently. Lanes support solo and mute. A silence gate skips all processing after 50 consecutive silent blocks.</td>
           </tr>
           <tr>
-            <td><strong>4 — Recombine</strong>Parallel mixer</td>
-            <td><code>ParallelMixer</code></td>
-            <td>Sums the five processed band buffers back into the main output buffer using per-lane gain values sourced from the APVTS parameter tree.</td>
-            <td>Dry signal is preserved as a separate reference; wet/dry is applied at master output</td>
+            <td><strong>Recombination</strong>Wet bus sum</td>
+            <td>Additive mix to wet buffer</td>
+            <td>Each active lane's output is accumulated into the wet buffer. Lane wet level is a scalar gain applied before accumulation.</td>
           </tr>
           <tr>
-            <td><strong>5 — Output</strong>Stereo out</td>
-            <td>—</td>
-            <td>Processed stereo buffer returned to the DAW host.</td>
-            <td>No latency compensation required. LR4 filters introduce phase shift, not time delay</td>
+            <td><strong>Output</strong>Dry/wet blend</td>
+            <td>Equal-power crossfade</td>
+            <td>Global mix uses a quarter-cosine crossfade: <code>cos(angle)</code> dry, <code>sin(angle)</code> wet. Keeps output level consistent and prevents stereo image narrowing at intermediate mix positions. Output gain applied last.</td>
           </tr>
         </tbody>
       </table>
     </div>
-
   </div>
 
   <!-- DESIGN DECISIONS -->
@@ -417,31 +326,31 @@
 
     <div class="decision-grid reveal d1">
       <div class="decision-card">
-        <div class="dc-label">Filter Design</div>
-        <div class="dc-title">Why Linkwitz-Riley over Butterworth?</div>
-        <div class="dc-body">A naive crossover using matched Butterworth filters causes a 3 dB peak at the crossover frequency when bands are summed. Linkwitz-Riley (LR) filters are designed as the square of a Butterworth — a matched LR pair sums to exactly 0 dB at all frequencies. This is a prerequisite for a parallel architecture where unchanged output when all lane gains are equal is a correctness requirement, not a nice-to-have.</div>
+        <div class="dc-label">Spectral Routing</div>
+        <div class="dc-title">Send shaping over crossover splitting</div>
+        <div class="dc-body">Rather than splitting the signal into hard frequency bands via crossover filters, each lane uses a parametric EQ send (<code>SendMask5</code>) to shape what it receives. This gives the user musical control: a band can be a narrow peak, a shelf, a bandpass, or fully open. The bands overlap freely. This is more flexible than a fixed crossover and avoids the phase-sum constraints of a multiband splitter.</div>
+      </div>
+      <div class="decision-card">
+        <div class="dc-label">Reverb</div>
+        <div class="dc-title">Dual-engine with runtime level matching</div>
+        <div class="dc-body">The reverb lane runs both an algorithmic engine (<code>juce::dsp::Reverb</code>) and a convolution engine (<code>juce::dsp::Convolution</code>) and switches between them based on whether an IR is loaded. A smoothed EMA of each path's RMS output is maintained, and <code>irOutputGain</code> converges toward the ratio each block, so switching between algorithmic and IR modes does not cause a perceived level jump.</div>
+      </div>
+      <div class="decision-card">
+        <div class="dc-label">Chorus</div>
+        <div class="dc-title">Custom multi-voice micro-pitch engine</div>
+        <div class="dc-body">Rather than a standard delay-line chorus, the chorus lane uses a custom <code>MicroPitch</code> class with up to 6 independently phased voices. Each voice has its own LFO phase offset, rate multiplier, and depth scale. The LFO uses a fast polynomial sine approximation to avoid <code>std::sin</code> on the audio thread. Voice weights are normalized by count so output gain is consistent regardless of voice number.</div>
       </div>
       <div class="decision-card">
         <div class="dc-label">Concurrency</div>
-        <div class="dc-title">APVTS over manual atomic parameters</div>
-        <div class="dc-body">JUCE's <code>AudioProcessorValueTreeState</code> provides a managed parameter tree with thread-safe atomic reads on the audio thread, built-in DAW automation support, and serialisation to XML for session recall. The alternative of managing raw <code>std::atomic&lt;float&gt;</code> parameters manually would have required reimplementing all of this infrastructure. APVTS was the correct abstraction for the scope of this project.</div>
-      </div>
-      <div class="decision-card">
-        <div class="dc-label">Memory</div>
-        <div class="dc-title">Pre-allocating band buffers</div>
-        <div class="dc-body">The audio thread in a real-time context must never allocate or deallocate heap memory. <code>new</code>, <code>delete</code>, and <code>std::vector::push_back()</code> that triggers reallocation are all prohibited. ToneLab allocates five <code>juce::AudioBuffer&lt;float&gt;</code> instances in <code>prepareToPlay()</code>, which is called on a non-real-time thread, and reuses them for the lifetime of the plugin session.</div>
-      </div>
-      <div class="decision-card">
-        <div class="dc-label">Parallelism</div>
-        <div class="dc-title">Sequential lanes vs. multi-threaded processing</div>
-        <div class="dc-body">An early design explored running the five lane processors on a thread pool. This was abandoned for two reasons: the overhead of thread synchronisation at the short buffer sizes used in practice (128 to 256 samples) exceeds the compute savings; and managing thread safety across five lanes sharing APVTS parameter state added significant complexity for marginal gain at the scales this plugin operates at.</div>
+        <div class="dc-title">Cached atomic parameter pointers</div>
+        <div class="dc-body">All APVTS parameters are accessed via pre-cached <code>std::atomic&lt;float&gt;*</code> pointers populated once at startup in <code>cacheParamPointers()</code>. Each <code>processBlock()</code> call loads values from these pointers once and operates on the cached scalars. Last-value caches on filter coefficients (tone, reverb parameters, delay mode) skip redundant coefficient recalculation when parameters have not changed.</div>
       </div>
     </div>
   </div>
 
-</div><!-- /frame -->
+</div>
 
-<!-- IMPLEMENTATION — dark section -->
+<!-- IMPLEMENTATION — dark -->
 <div class="code-section" id="implementation">
   <div class="section-wrap" style="max-width: 1200px; margin: 0 auto;">
     <div class="section-header reveal">
@@ -452,76 +361,83 @@
     <div class="code-block reveal">
       <div class="code-block-header">
         <span>PluginProcessor.cpp — processBlock()</span>
-        <span>Audio thread · zero allocation path</span>
+        <span>Audio thread</span>
       </div>
-<pre><span class="cc">// processBlock is called by the DAW on the audio thread.</span>
-<span class="cc">// Hard rule: no heap allocation, no blocking, no exceptions.</span>
+<pre><span class="cc">// Each lane: build its spectral send, apply the FX engine, accumulate to wet bus.</span>
+<span class="cc">// All buffers pre-allocated. No heap allocation on the audio thread.</span>
 
-<span class="ck">void</span> ToneLabProcessor::<span class="cf">processBlock</span>(
-    juce::AudioBuffer&lt;<span class="ck">float</span>&gt;&amp; buffer,
-    juce::MidiBuffer&amp; midiMessages)
+<span class="ck">void</span> ToneLabAudioProcessor::<span class="cf">processBlock</span>(
+    juce::AudioBuffer&lt;<span class="ck">float</span>&gt;&amp; buffer, juce::MidiBuffer&amp;)
 {
-    juce::ScopedNoDenormals noDenormals;  <span class="cc">// prevent denormal performance traps</span>
+    juce::ScopedNoDenormals noDenormals;
 
-    <span class="ck">for</span> (<span class="ck">int</span> lane = <span class="cn">0</span>; lane &lt; NUM_LANES; ++lane)
+    <span class="cc">// Silence gate: skip all processing after 50 silent blocks</span>
+    <span class="ck">const bool</span> inputIsSilent = (silentBlockCount &gt; kSilenceThresholdBlocks);
+
+    <span class="cc">// Chorus lane: spectral send is shaped per-band inside applyChorusLane</span>
+    <span class="ck">if</span> (!inputIsSilent &amp;&amp; <span class="cf">laneActive</span>(choSolo, choMute))
+        <span class="cf">applyChorusLane</span>(dryBuffer, wetBuffer, <span class="cn">0</span>, numS);
+
+    <span class="cc">// Delay lane: SendMask5 shapes the send, then applyDelayLane processes it</span>
+    <span class="ck">if</span> (wet &gt; <span class="cn">0.0005f</span> &amp;&amp; !inputIsSilent &amp;&amp; <span class="cf">laneActive</span>(dlySolo, dlyMute))
     {
-        <span class="cc">// Copy input into pre-allocated band buffer (no new allocation)</span>
-        bandBuffers[lane].<span class="cf">makeCopyOf</span>(buffer);
-
-        <span class="cc">// Apply crossover filter for this band's frequency range</span>
-        splitter.<span class="cf">processForBand</span>(bandBuffers[lane], lane);
-
-        <span class="cc">// Apply this lane's effect chain (distortion, reverb, etc.)</span>
-        laneProcessors[lane].<span class="cf">process</span>(bandBuffers[lane]);
+        <span class="ck">const bool</span> any = sendDLY.<span class="cf">buildSend</span>(dryBuffer, dlySendBuf, <span class="cn">0</span>, numS, nodePtrs[<span class="cn">1</span>], sr);
+        <span class="ck">if</span> (any) { <span class="cf">applyDelayLane</span>(dlySendBuf, numS, sr); wetBuffer.<span class="cf">addFrom</span>(...); }
     }
 
-    <span class="cc">// Sum all five processed bands back into the output buffer</span>
-    mixer.<span class="cf">recombine</span>(bandBuffers, buffer, laneGains);
+    <span class="cc">// ... Saturation, Reverb, Distortion lanes follow the same pattern</span>
+
+    <span class="cc">// Equal-power crossfade: cos(angle) dry + sin(angle) wet</span>
+    <span class="ck">const float</span> angle  = mix * juce::MathConstants&lt;<span class="ck">float</span>&gt;::halfPi;
+    <span class="ck">const float</span> dryAmt = std::<span class="cf">cos</span>(angle);
+    <span class="ck">const float</span> wetAmt = std::<span class="cf">sin</span>(angle);
 }</pre>
     </div>
 
     <div class="code-block reveal">
       <div class="code-block-header">
-        <span>SpectrumSplitter.h — crossover filter bank</span>
-        <span>LR4 · phase-coherent band splitting</span>
+        <span>PluginProcessor.cpp — Delay lane (Tape mode detail)</span>
+        <span>Wow / flutter</span>
       </div>
-<pre><span class="cc">// Linkwitz-Riley 4th-order crossover bank.</span>
-<span class="cc">// Flat magnitude response when all bands are summed.</span>
+<pre><span class="cc">// Tape mode: 3 kHz LPF on feedback path + slow pitch modulation on delay time</span>
+<span class="cc">// Wow: ±1% depth at 0.5 Hz — implemented as an LFO on delaySamps</span>
 
-<span class="ck">class</span> <span class="cf">SpectrumSplitter</span>
+<span class="ck">const float</span> wowDepth = (mode == <span class="cn">1</span>) ? delaySamps * <span class="cn">0.01f</span> : <span class="cn">0.0f</span>;
+<span class="ck">const float</span> wowInc   = (mode == <span class="cn">1</span>)
+    ? (<span class="cn">2.0f</span> * juce::MathConstants&lt;<span class="ck">float</span>&gt;::pi * <span class="cn">0.5f</span>) / (<span class="ck">float</span>)sr
+    : <span class="cn">0.0f</span>;
+
+<span class="ck">for</span> (<span class="ck">int</span> i = <span class="cn">0</span>; i &lt; n; ++i)
 {
-<span class="ck">public</span>:
-    <span class="ck">void</span> <span class="cf">prepare</span>(<span class="ck">const</span> juce::dsp::ProcessSpec&amp; spec);
-    <span class="ck">void</span> <span class="cf">setCrossoverFrequency</span>(<span class="ck">int</span> crossoverIndex, <span class="ck">float</span> hz);
-    <span class="ck">void</span> <span class="cf">processForBand</span>(juce::AudioBuffer&lt;<span class="ck">float</span>&gt;&amp; buffer, <span class="ck">int</span> bandIndex);
-
-<span class="ck">private</span>:
-    <span class="cc">// NUM_CROSSOVERS = NUM_LANES - 1 = 4 filter pairs</span>
-    std::array&lt;juce::dsp::LinkwitzRileyFilter&lt;<span class="ck">float</span>&gt;, NUM_CROSSOVERS&gt; lpFilters;
-    std::array&lt;juce::dsp::LinkwitzRileyFilter&lt;<span class="ck">float</span>&gt;, NUM_CROSSOVERS&gt; hpFilters;
-};</pre>
+    <span class="ck">float</span> wowOffset = wowDepth * std::<span class="cf">sin</span>(wowPhase);
+    <span class="ck">const float</span> ds = <span class="cf">jlimit</span>(<span class="cn">1.0f</span>, <span class="cn">192000.0f</span>, delaySamps + wowOffset);
+    <span class="ck">float</span> dL = delayL.<span class="cf">popSample</span>(<span class="cn">0</span>, ds, <span class="ck">true</span>);
+    <span class="cc">// Feedback through 3kHz LPF for tape mode</span>
+    <span class="ck">if</span> (mode &gt; <span class="cn">0</span>) dL = dlyFbFiltL.<span class="cf">processSample</span>(dL);
+    delayL.<span class="cf">pushSample</span>(<span class="cn">0</span>, L[i] + dL * fb * fbGainL);
+}</pre>
     </div>
 
     <div class="code-notes reveal d1">
       <div class="code-note">
         <div class="cn-num">// Note 01</div>
-        <div class="cn-title">ScopedNoDenormals</div>
-        <div class="cn-body">Denormal floating-point numbers (values very close to zero) cause catastrophic CPU slowdowns on x86 processors. <code>ScopedNoDenormals</code> sets the FTZ/DAZ CPU flags for the scope of <code>processBlock()</code>, flushing denormals to zero without branching logic in the DSP code.</div>
+        <div class="cn-title">Silence gate</div>
+        <div class="cn-body">A block-level RMS check (<code>kSilenceThresholdRMS = 1e-6f</code>) increments a counter on silent blocks and resets it on non-silent ones. After 50 consecutive silent blocks, all lane processing is skipped. This prevents unnecessary computation and avoids reverb tail artifacts accumulating on silence.</div>
       </div>
       <div class="code-note">
         <div class="cn-num">// Note 02</div>
-        <div class="cn-title">makeCopyOf vs addFrom</div>
-        <div class="cn-body"><code>makeCopyOf</code> is used during the split stage to duplicate the dry input into each band buffer independently. <code>addFrom</code> is used in <code>ParallelMixer::recombine()</code> to accumulate bands into the output. Both operate on pre-allocated buffers with no allocation on the hot path.</div>
+        <div class="cn-title">Equal-power crossfade</div>
+        <div class="cn-body">A linear dry/wet blend reduces the combined level at mid-mix positions, which makes the stereo image appear to narrow. The quarter-cosine crossfade (<code>cos</code> dry, <code>sin</code> wet) maintains constant power across the mix range, keeping the output level and stereo width perceptually consistent.</div>
       </div>
       <div class="code-note">
         <div class="cn-num">// Note 03</div>
-        <div class="cn-title">laneGains from APVTS</div>
-        <div class="cn-body">Per-lane gain values are read from the APVTS parameter tree using <code>getRawParameterValue()</code>, which returns an <code>std::atomic&lt;float&gt;*</code>. The value is loaded once at the start of <code>processBlock()</code> and cached as a local, avoiding repeated atomic loads inside the inner sample loop.</div>
+        <div class="cn-title">RTA and peak metering</div>
+        <div class="cn-body">A 2048-point stereo FIFO feeds a lock-free block handoff to the editor's spectrum display via an <code>std::atomic&lt;bool&gt;</code> ready flag. Input and output peak levels are written as <code>std::atomic&lt;float&gt;</code> each block and polled by the editor timer. No locks, no contention on the audio path.</div>
       </div>
     </div>
 
     <!-- DEV ENVIRONMENT -->
-    <div style="margin-top: 4rem;" id="build">
+    <div style="margin-top: 4rem;" id="dev-environment">
       <div class="section-header reveal" style="margin-bottom: 2.5rem;">
         <div class="section-num" style="color:rgba(255,255,255,0.28);">05 — Dev Environment</div>
         <h2 class="section-title">Getting it running<br><em>on my machine.</em></h2>
@@ -539,14 +455,14 @@
           <div class="step-num">02</div>
           <div>
             <div class="step-title">Build toolchain</div>
-            <div class="step-body">The project was configured in Projucer and built through Xcode. Projucer handles the JUCE module linking and generates the Xcode project; from there the plugin was built and run locally as a VST3 and AU without any additional packaging or distribution step.</div>
+            <div class="step-body">The project was configured in Projucer and built through Xcode. Projucer handles JUCE module linking and generates the Xcode project; from there the plugin was built and run locally as a VST3 and AU without any additional packaging step.</div>
           </div>
         </div>
         <div class="build-step">
           <div class="step-num">03</div>
           <div>
             <div class="step-title">DAW testing</div>
-            <div class="step-body">All testing was done in Logic Pro. After each build, the AU component was copied to <code>~/Library/Audio/Plug-Ins/Components/</code> and validated with <code>auval</code> before rescanning in Logic. Logic's built-in AU validation gave useful error output when the plugin metadata or parameter tree was malformed.</div>
+            <div class="step-body">All testing was done in Logic Pro. After each build, the AU component was copied to <code>~/Library/Audio/Plug-Ins/Components/</code> and validated with <code>auval</code> before rescanning in Logic. Logic's AU validation gave useful error output when the plugin metadata or parameter tree was malformed.</div>
           </div>
         </div>
         <div class="build-step">
@@ -567,8 +483,7 @@
     <a class="footer-logo" href="https://vector-dsp.com">Vector <em>DSP</em></a>
     <div class="footer-links">
       <a href="README.md">README</a>
-      <a href="process.md">Process Log</a>
-      <a href="https://github.com/YOUR_USERNAME/ToneLab">GitHub</a>
+      <a href="https://github.com/KaiHansen22/ToneLabDevelopment">GitHub</a>
       <a href="https://vector-dsp.com/tonelab">Product Page</a>
       <a href="https://vector-dsp.com">Vector DSP</a>
       <span class="footer-copy">© 2026 Vector DSP</span>
